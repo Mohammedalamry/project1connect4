@@ -51,7 +51,7 @@ function Responsclick(evet){
      
      
        if(pleyer==1){   
-               
+            player1.classList.toggle("player1");
         culumn1arry[columnCounter1].classList.add("player1");
                  pleyer=0;
                  columnCounter1--;
@@ -60,6 +60,7 @@ function Responsclick(evet){
  }  
               
 else  if(pleyer==0){   
+  player2.classList.toggle("player2");
   culumn1arry[columnCounter1].classList.add("player2")
           pleyer=1;
           columnCounter1--;
@@ -72,7 +73,7 @@ if (columnCounter2<4 && columnCounter2 >=0)
      
      
        if(pleyer==1){   
-               
+        player1.classList.toggle("player1");   
         culumn2arry[columnCounter2].classList.add("player1");
                  pleyer=0;
                  columnCounter2--;
@@ -84,7 +85,7 @@ if (columnCounter2<4 && columnCounter2 >=0)
               
 else  if(pleyer==0){
 
- 
+  player2.classList.toggle("player2");
   culumn2arry[columnCounter2].classList.add("player2") 
           pleyer=1;
           columnCounter2--;
@@ -98,7 +99,7 @@ else  if(pleyer==0){
      
      
     if(pleyer==1){   
-            
+      player1.classList.toggle("player1");     
      culumn3arry[columnCounter3].classList.add("player1");
               pleyer=0;
               columnCounter3--;
@@ -111,7 +112,7 @@ else  if(pleyer==0){
 else  if(pleyer==0){
        
   
-
+  player2.classList.toggle("player2");
 
   
 culumn3arry[columnCounter3].classList.add("player2")
@@ -129,7 +130,7 @@ if(evet.target.matches('span.column4') ){
     
      
   if(pleyer==1){   
-          
+    player1.classList.toggle("player1");    
     culumn4arry[columnCounter4].classList.add("player1");
             pleyer=0;
             columnCounter4--;
@@ -143,7 +144,7 @@ if(evet.target.matches('span.column4') ){
 else  if(pleyer==0){
      
 
-
+  player2.classList.toggle("player2");
 
 
 culumn4arry[columnCounter4].classList.add("player2")
@@ -172,11 +173,9 @@ for (let i = 0 ; i < culumn1arry.length ; i++)
        count1b++;
 }
 if(count1r==4)  
-{  alert("player1 wins")
-location.reload();}
+{  setTimeout( function(){ alert("player1 wins") ; location.reload(); },300 )}
 else if (count1b == 4)
-{alert("player2 wins")
-location.reload();
+{setTimeout( function(){ alert("player2 wins") ; location.reload(); },200 )
 }
 
 /////////column 2
@@ -188,11 +187,9 @@ for (let i = 0 ; i < culumn1arry.length ; i++)
        count2b++;
 }
 if(count2r==4)  
-{  alert("player1 wins")
-location.reload();
+{  setTimeout( function(){ alert("player1 wins") ; location.reload(); },500 ) 
 }else if (count2b == 4)
-{alert("player2 wins")
-location.reload();
+{setTimeout( function(){ alert("player2 wins") ; location.reload(); },500 ) 
 }
 
 /////////////////////column3
@@ -204,12 +201,12 @@ for (let i = 0 ; i < culumn3arry.length ; i++)
        count3b++;
 }
 if(count3r==4)  
- { alert("player1 wins")
- location.reload();
+ {setTimeout( function(){ alert("player1 wins") ; location.reload(); },500 ) 
 }
 else if (count3b == 4)
-{alert("player2 wins")
-location.reload();
+{
+  setTimeout( function(){ alert("player2 wins") ; location.reload(); },500 ) 
+
 }
 
 ///////////////////////column4
@@ -238,12 +235,10 @@ for (let i = 0 ; i < row1arry.length ; i++)
   countrow1b++;
 }
 if(countrow1r==4)  
-{  alert("player1 wins")
-location.reload();
+{ setTimeout( function(){ alert("player1 wins"); location.reload();      },200 ) 
 }
 else if (countrow1b == 4)
-{alert("player2 wins")
-location.reload();
+{setTimeout( function(){ alert("player2 wins"); location.reload();      },300 ) 
 }
 
 ///////////////////////row2
@@ -255,12 +250,10 @@ for (let i = 0 ; i < row2arry.length ; i++)
   countrow2b++;
 }
 if(countrow2r==4)  
-  {alert("player1 wins")   
- location.reload();
+  {setTimeout( function(){ alert("player1 wins"); location.reload();      },200 ) 
 }
 else if (countrow2b == 4)
-{alert("player2 wins")   
-location.reload();
+{setTimeout( function(){ alert("player2 wins"); location.reload();      },300 ) 
 }
 ///////////////////////row3
 for (let i = 0 ; i < row3arry.length ; i++)
@@ -271,12 +264,10 @@ for (let i = 0 ; i < row3arry.length ; i++)
   countrow3b++;
 }
 if(countrow3r==4)  
- { alert("player1 wins")
- location.reload();
+ { setTimeout( function(){ alert("player1 wins"); location.reload();      },200 ) 
 }
 else if (countrow3b == 4)
-{alert("player2 wins")
-location.reload();
+{setTimeout( function(){ alert("player2 wins"); location.reload();      },300 ) 
 
 }
 
@@ -292,14 +283,11 @@ for (let i = 0 ; i < row4arry.length ; i++)
   countrow4b++;
 }
 if(countrow4r==4)  
-  {alert("player1 wins")   
-  location.reload();
+  { 
+    setTimeout( function(){ alert("player1 wins"); location.reload();      },100 ) 
 }
 else if (countrow4b == 4)
-{alert("player2 wins")    
-
-location.reload();
-
+{ setTimeout( function(){ alert("player2 wins"); location.reload();      },300 ) 
 }
 
 ///////////////////////di1
@@ -311,13 +299,11 @@ for (let i = 0 ; i < row4arry.length ; i++)
   countdi1b++;
 }
 if(countdi1r==4)  
-  {alert("player1 wins")   
-  location.reload();
+  {   setTimeout( function(){ alert("player1 wins"); location.reload();      },500 )  
 }
 else if (countdi1b== 4)
-{alert("player2 wins")    
-
-location.reload();
+{ 
+  setTimeout( function(){ alert("player2 wins"); location.reload();      },500 )  
 
 }
 
